@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './DateAndTimePicker.module.scss';
 import TextField from '@material-ui/core/TextField';
+import PropTypes from 'prop-types';
 
-
-const DateAndTimePicker = () => (
+const DateAndTimePicker = ({date, time}) => (
   <form className={styles.picker} noValidate>
     <TextField
       id="date"
       label="date"
       type="date"
-      defaultValue="2017-05-24"
+      defaultValue={date}
       InputLabelProps={{
         shrink: true,
       }}
@@ -18,7 +18,7 @@ const DateAndTimePicker = () => (
       id="time"
       label="time"
       type="time"
-      defaultValue="07:30"
+      defaultValue={time}
       InputLabelProps={{
         shrink: true,
       }}
@@ -28,5 +28,10 @@ const DateAndTimePicker = () => (
     />
   </form>
 );
+
+DateAndTimePicker.propTypes = {
+  date: PropTypes.string,
+  time: PropTypes.string,
+};
 
 export default DateAndTimePicker;
