@@ -2,4 +2,12 @@
 
 .component {
   padding: $base-size;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .item {
+    margin: 15px;
+  }
 }
