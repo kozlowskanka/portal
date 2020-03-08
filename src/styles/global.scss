@@ -1,5 +1,10 @@
 @import "normalize.scss";
+@import './settings.scss';
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+h2 {
+  font-family: $main-font;
 }
