@@ -7,7 +7,7 @@ import Table from './components/views/Table/Table';
 import TableNew from './components/views/TableNew/TableNew';
 import Event from './components/views/Event/Event';
 import EventNew from './components/views/EventNew/EventNew';
-import Waiter from './components/views/Waiter/Waiter';
+import Waiter from './components/views/Waiter/WaiterContainer';
 import Order from './components/views/Order/Order';
 import OrderNew from './components/views/OrderNew/OrderNew';
 import Kitchen from './components/views/Kitchen/Kitchen';

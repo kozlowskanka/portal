@@ -256,5 +256,37 @@
     }
   ],
   "booking": [
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "status": "free",
+      "order": null
+    },
+    {
+      "id": 2,
+      "status": "thinking",
+      "order": 123
+    },
+    {
+      "id": 3,
+      "status": "ordered",
+      "order": 234
+    },
+    {
+      "id": 4,
+      "status": "prepared",
+      "order": 345
+    },
+    {
+      "id": 5,
+      "status": "delivered",
+      "order": 456
+    },
+    {
+      "id": 6,
+      "status": "paid",
+      "order": 678
+    }
   ]
 }
