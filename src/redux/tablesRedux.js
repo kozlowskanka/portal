@@ -30,6 +30,7 @@ export const fetchFromAPI = () => {
       .get(`${api.url}/${api.tables}`)
       .then(res => {
         dispatch(fetchSuccess(res.data));
+        console.log('get response');
       })
       .catch(err => {
         dispatch(fetchError(err.message || true));
@@ -38,12 +39,14 @@ export const fetchFromAPI = () => {
 };
 
 export const updateStatus = (status, id) => {
+  console.log('status,id', status,id);
+
   return (dispatch) => {
-    dispatch(fetchStarted());
+    // dispatch(fetchStarted());
 
     Axios
       .get(`${api.url}/${api.tables}`)
-      .then( () => {
+      .then(() => {
         dispatch(fetchStatus(status, id));
       })
       .catch(err => {
