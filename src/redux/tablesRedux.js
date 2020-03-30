@@ -42,13 +42,10 @@ export const updateStatus = (status, id) => {
   console.log('status,id', status,id);
 
   return (dispatch) => {
-    // dispatch(fetchStarted());
+    dispatch(fetchStatus(status, id));
 
     Axios
-      .get(`${api.url}/${api.tables}`)
-      .then(() => {
-        dispatch(fetchStatus(status, id));
-      })
+      .patch(`${api.url}/${api.tables}/${id}`, {status})
       .catch(err => {
         dispatch(fetchError(err.message || true));
       });
